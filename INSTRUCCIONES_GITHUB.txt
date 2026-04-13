@@ -1,0 +1,39 @@
+═══════════════════════════════════════════════════════
+  WALLET ACIAR v12 — INSTRUCCIONES DE DEPLOY
+═══════════════════════════════════════════════════════
+
+ARCHIVOS A SUBIR A GITHUB:
+  1. index.html     ← la app completa
+  2. 404.html       ← página de error elegante
+
+EL .nojekyll NO LO NECESITÁS DESCARGAR.
+Lo creás directamente en GitHub así:
+
+PASO 1 — Crear repo nuevo
+  • github.com → + → New repository
+  • Nombre: wallet-aciar
+  • Private (o Public)
+  • Create repository
+
+PASO 2 — Subir index.html y 404.html
+  • "uploading an existing file"
+  • Subí los 2 archivos juntos
+  • Commit: "Wallet Aciar v12"
+
+PASO 3 — Crear .nojekyll desde GitHub (sin descargar nada)
+  • En el repo → "Add file" → "Create new file"
+  • Nombre del archivo: .nojekyll
+  • Contenido: dejar VACÍO (no escribir nada)
+  • Commit: "add nojekyll"
+
+PASO 4 — Activar GitHub Pages
+  • Settings → Pages
+  • Source: Deploy from a branch
+  • Branch: main → / (root)
+  • Save
+  • Esperar 2-3 minutos
+
+PASO 5 — Tu URL
+  https://autonimus.github.io/wallet-aciar
+
+═══════════════════════════════════════════════════════

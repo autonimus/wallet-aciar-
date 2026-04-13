@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Wallet Aciar</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script>
+    // GitHub Pages SPA redirect trick
+    // Guarda la URL actual y redirige al index con el path como parámetro
+    var path = window.location.pathname;
+    var query = window.location.search;
+    var hash = window.location.hash;
+    // Si ya estamos en la raíz, no hacer nada
+    if (path !== '/wallet-aciar/' && path !== '/wallet-aciar/index.html') {
+      var redirectUrl = '/wallet-aciar/' + 
+        '?redirect=' + encodeURIComponent(path + query) + hash;
+      window.location.replace(redirectUrl);
+    } else {
+      window.location.replace('/wallet-aciar/');
+    }
+  </script>
+</head>
+<body>
+  <style>
+    body { background: #0a0a0a; color: #fff; font-family: -apple-system, sans-serif;
+           display: flex; align-items: center; justify-content: center; 
+           height: 100vh; margin: 0; flex-direction: column; gap: 12px; }
+    .spinner { width: 32px; height: 32px; border: 2px solid #222; 
+               border-top-color: #c9a84c; border-radius: 50%; animation: spin 1s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+  <div class="spinner"></div>
+  <div style="font-size:14px;color:#555;">Cargando Wallet Aciar...</div>
+</body>
+</html>
