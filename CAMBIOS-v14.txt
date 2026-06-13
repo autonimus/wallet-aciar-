@@ -1,0 +1,38 @@
+WALLET ACIAR v14 — DEDUPE + CAJA NEGRA
+========================================
+(Incluye TODO lo de v13: las 10 funciones duplicadas removidas)
+
+NUEVO EN v14 — tres blindajes, cero cambios de lógica:
+
+1. ERRORES VISIBLES (caja negra de avión)
+   Cualquier error de JavaScript ahora aparece como un banner rojo
+   abajo de la pantalla (con botón ✕) y queda guardado en un registro
+   (últimos 20 errores). Se acabaron los errores invisibles: la app
+   misma nos va a decir qué se rompe y en qué línea.
+
+2. PESTAÑAS BLINDADAS
+   Si Hub/Studio/Inicio explotan al renderizar, en vez de pantalla
+   negra vas a ver el error escrito y un botón "Recargar".
+   → La pestaña Hub vacía de tus capturas ahora va a CONTAR su error.
+
+3. WATCHDOG DE "Cargando..."
+   A los 12 segundos, todo cartel que siga diciendo "Cargando..." o
+   "Actualizando..." pasa a "Sin datos — revisá conexión y tocá ↺".
+   La app deja de mentir: si una API falló, lo dice.
+
+CÓMO SUBIRLO:
+1. GitHub → wallet-aciar- → Add file → Upload files
+2. Arrastrá este index.html → Commit "Wallet Aciar v14"
+3. Esperá 2-3 min → recargá autonimus.github.io/wallet-aciar-/
+   (si ves lo viejo: recarga forzada o abrir en incógnito)
+
+QUÉ PROBAR DESPUÉS DE SUBIR:
+- Abrí la pestaña Hub → si falla, ahora te dice POR QUÉ (mandame captura)
+- Esperá 15 segundos en Mercado → los "Cargando..." colgados deben
+  volverse "Sin datos..."
+- Si aparece el banner rojo abajo → captura, esa es la pista que necesito
+
+PENDIENTE (próxima cirugía, con tus capturas de errores):
+- Arreglar la causa raíz de cada error que la caja negra revele
+- Auditar la pantalla de bloqueo (Huella/PIN/palabra secreta)
+- Fase 2 grande: extirpar el Aciarcito embebido
